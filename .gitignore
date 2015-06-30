@@ -1,0 +1,9 @@
+extra-user-*
+newIso/
+newtxt.cfg
+rsync.out
+ubuntu-*-server-amd64.iso
+ubuntu-*-server-amd64.iso.MD5
+ubuntu-*-server-auto-amd64.iso
+ubuntu-*-server-auto-amd64.iso.MD5
+ubuntu-uk.seed
