@@ -4,8 +4,9 @@ See https://help.ubuntu.com/community/InstallCDCustomization
 
 This setup creates an "ubuntu" user, and an extra user.
 
-To create the ISO, on Ubuntu Linux:
+## To create the ISO, on Ubuntu Linux:
 
+```
 # for mkpasswd:
 apt-get --yes install whois
 
@@ -22,19 +23,24 @@ sed -i \
 sudo id
 ./build.sh
 rm extra-user-passwd ubuntu-uk.seed
+```
 
-To write the resulting ISO to a USB stick on OSX:
+## To write the resulting ISO to a USB stick on OSX
 
+```
 scp ubuntu-14.04.2-server-auto-amd64.iso mak@crab.lan:ISO/
-
+```
+```
 diskutil list
 diskutil unmountDisk /dev/disk4
 diskutil list
 # check that disk is the one you intend to overwrite
 sudo dd if=/Users/mak/ISO/ubuntu-14.04.2-server-auto-amd64.iso of=/dev/rdisk4 bs=1m
 diskutil eject /dev/disk4
+```
 
-Ideas for improvement:
+## Ideas for improvement
+
 - ensure all packages are available on-disk, make internet connectivity optional
 - rather than using a USB stick, I could run the installer from another partition,
   but that would require some custom partitioning.
