@@ -1,4 +1,4 @@
-Create custom installer with preseed, with UK choices and some credentials.
+Create a custom installer with preseed, with UK choices and some credentials.
 I use this to re-image my test cluster machines.
 See https://help.ubuntu.com/community/InstallCDCustomization
 
