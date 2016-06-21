@@ -27,9 +27,14 @@ rm extra-user-passwd ubuntu-uk.seed
 
 ## To write the resulting ISO to a USB stick on OSX
 
+Copy to the Mac:
+
 ```
 scp ubuntu-16.04-server-auto-amd64.iso mak@crab.lan:ISO/
 ```
+
+Then on the Mac:
+
 ```
 diskutil list
 diskutil unmountDisk /dev/disk4
