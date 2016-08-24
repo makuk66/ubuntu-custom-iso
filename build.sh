@@ -41,8 +41,12 @@ sudo cp postinstall.sh newIso/
 for f in extra-user-ssh-key extra-user-passwd extra-user-fullname extra-user-username; do sudo cp $f newIso/; done
 
 # re-generate md5sum
+# The find will warn 'File system loop detected' and return non-zero exit status on the 'ubuntu' symlink to '.'
+# To avoid that, temporarily move it out of the way
+sudo mv newIso/ubuntu .
 (cd newIso; sudo find '!' -name "md5sum.txt" '!' -path "./isolinux/*" -follow -type f -exec `which md5sum` {} \; > ../md5sum.txt)
 sudo mv md5sum.txt newIso/
+sudo mv ubuntu newIso
 
 # build ISO image
 sudo mkisofs -r -V "Custom Ubuntu Install CD" \
