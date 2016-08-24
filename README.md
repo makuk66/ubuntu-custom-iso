@@ -30,7 +30,7 @@ rm extra-user-passwd ubuntu-uk.seed
 Copy to the Mac:
 
 ```
-scp ubuntu-16.04-server-auto-amd64.iso mak@crab.lan:ISO/
+scp ubuntu-16.04.1-server-auto-amd64.iso mak@crab.lan:ISO/
 ```
 
 Then on the Mac:
@@ -40,7 +40,7 @@ diskutil list
 diskutil unmountDisk /dev/disk4
 diskutil list
 # check that disk is the one you intend to overwrite
-sudo dd if=/Users/mak/ISO/ubuntu-16.04-server-auto-amd64.iso of=/dev/rdisk4 bs=1m
+sudo dd if=/Users/mak/ISO/ubuntu-16.04.1-server-auto-amd64.iso of=/dev/rdisk4 bs=1m
 diskutil eject /dev/disk4
 ```
 
