@@ -2,7 +2,7 @@
 
 # See http://askubuntu.com/questions/409607/how-to-create-a-customized-ubuntu-server-iso
 
-export SOURCE=ubuntu-14.04.2-server-amd64.iso
+export SOURCE=ubuntu-16.04.1-server-amd64.iso
 export TARGET=$(echo "$SOURCE" | sed -e 's/server-/server-auto-/')
 
 if [ ! -f $SOURCE ]; then
