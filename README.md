@@ -13,7 +13,7 @@ apt-get --yes install whois
 echo $USER > extra-user-username
 echo "Martijn Koster" > extra-user-fullname
 (printf "$USER:"; stty -echo; mkpasswd --stdin --method=sha-512; stty echo) > extra-user-passwd
-cp ~/.ssh/id_dsa.pub extra-user-ssh-key
+cp ~/.ssh/id_rsa.pub extra-user-ssh-key
 cp ubuntu-uk.seed.template ubuntu-uk.seed
 password=$(<extra-user-passwd)
 sed -i \
