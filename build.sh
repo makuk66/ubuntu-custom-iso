@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # See http://askubuntu.com/questions/409607/how-to-create-a-customized-ubuntu-server-iso
 
 export SOURCE=ubuntu-16.04.1-server-amd64.iso
