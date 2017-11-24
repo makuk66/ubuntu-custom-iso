@@ -25,7 +25,7 @@ sudo --validate
 rm extra-user-passwd ubuntu-uk.seed
 ```
 
-## To write the resulting ISO to a USB stick on OSX
+## To write the resulting ISO to a USB stick on MacOS
 
 Copy to the Mac:
 
