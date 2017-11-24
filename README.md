@@ -43,10 +43,3 @@ diskutil list
 sudo dd if=/Users/mak/ISO/ubuntu-16.04.3-server-auto-amd64.iso of=/dev/rdisk4 bs=1m
 diskutil eject /dev/disk4
 ```
-
-## Ideas for improvement
-
-- ensure all packages are available on-disk, make internet connectivity optional
-- rather than using a USB stick, I could run the installer from another partition,
-  but that would require some custom partitioning.
-- it might be quicker/easier to backup/restore rather than install (be it from USB or disk).
