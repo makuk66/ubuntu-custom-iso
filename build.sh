@@ -4,12 +4,12 @@ set -euo pipefail
 
 # See http://askubuntu.com/questions/409607/how-to-create-a-customized-ubuntu-server-iso
 
-VERSION=${1:-16.04.3}
+VERSION=${1:-18.04}
 SOURCE="ubuntu-$VERSION-server-amd64.iso"
 TARGET="$(echo "$SOURCE" | sed -e 's/server-/server-auto-/')"
 
 if [ ! -f "$SOURCE" ]; then
-  URL="http://releases.ubuntu.com/$VERSION/$SOURCE"
+  URL="http://cdimage.ubuntu.com/releases/$VERSION/release/$SOURCE"
   echo "Downloading $URL"
   curl --output "${SOURCE}.tmp" "$URL"
   mv "${SOURCE}.tmp" "$SOURCE"
@@ -59,6 +59,7 @@ sudo mkisofs -r -V "Custom Ubuntu Install CD" \
   -boot-load-size 4 -boot-info-table \
   -o "$TARGET" newIso/
 ls -l "$TARGET"
+
 sudo chown "$USER:$USER" "$TARGET"
 isohybrid "$TARGET"
 
